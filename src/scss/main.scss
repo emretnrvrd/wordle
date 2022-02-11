@@ -1,0 +1,79 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: $dark;
+}
+.app-area{
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  .head{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid $light;
+    .app-title{
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  .main-area{
+    padding: 100px 0;
+  }
+  .word-slots{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    .word-slot{
+      $gutters :10px;
+      display: flex;
+      margin-bottom: $gutters ;
+
+      .letter-slot{
+        $edge :64px ;
+        height: $edge;
+        width: $edge;
+        line-height: $edge;
+        margin-right: $gutters;
+        text-align: center;
+        border: 2px solid $gray;
+        border-radius: 50%;
+        color: $light;
+        font-size: 36px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+
+    }
+  }
+  .keyboard{
+    user-select: none;
+    &-row{
+      display: flex;
+      justify-content: center;
+    }
+    .keyboard-button{
+      cursor: pointer;
+      display: block;
+      //min-width: 25px;
+
+      flex: auto;
+      line-height: 30px;
+      padding: 15px 10px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+      text-align: center;
+      vertical-align: baseline;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}

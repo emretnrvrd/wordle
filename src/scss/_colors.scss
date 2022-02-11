@@ -1,0 +1,27 @@
+$light:#fff;
+$dark:#222;
+$gray:#777;
+$success: #169700;
+$warning: #978a00;
+
+$colors :(
+  "light":$light,
+  "dark":$dark,
+  "gray":$gray,
+  "success":$success,
+  "warning":$warning,
+  "transparent": transparent
+);
+
+@each $name, $value in $colors {
+  .cl-#{$name} {
+    color: $value;
+  }
+  .bg-#{$name} {
+    background-color: $value;
+  }
+  .border-#{$name} {
+    border-color: $value!important;
+  }
+
+}
